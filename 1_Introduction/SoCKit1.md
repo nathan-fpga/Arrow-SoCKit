@@ -15,7 +15,7 @@ I hope to cover several major areas of interest in this series:
 5. SoC development and the HPS
 6. Boot flow and basic software development.
 
-There are many reasons why I'm focusing on Altera devices rather than Xilinx devices in this series. The primary reason is that the Xilinx design flow is far more explored – there are many excellent tutorials for Xilinx devices, such as Adam Taylor's excellent Microzed Chronicles for the low level implementation details of Zynq design, or Whitney Knitter's application projects, among many other extensive series on the topic.
+There are many reasons why I'm focusing on Altera devices rather than Xilinx devices in this series. The primary reason is that the Xilinx design flow is far more explored – there are many excellent tutorials for Xilinx devices, such as Adam Taylor's excellent Microzed Chronicles for the low level implementation details of Zynq design, or many interesting application projects, among many other extensive series on the topic.
 
 Altera, on the other hand, you have to dig around Rocketboards to find what you need. I am hoping to remedy that in this series to an extent.
 
