@@ -15,7 +15,7 @@ I hope to cover several major areas of interest in this series:
 5. SoC development and the HPS
 6. Boot flow and basic software development.
 
-There are many reasons why I'm focusing on Altera devices rather than Xilinx devices in this series. The primary reason is that the Xilinx design flow is far more explored – there are many excellent tutorials for Xilinx devices, such as Adam Taylor's excellent Microzed Chronicles for the low level implementation details of Zynq design, or Whitney Knitter's application projects, among many other extensive series on the topic.
+There are many reasons why I'm focusing on Altera devices rather than Xilinx devices in this series. The primary reason is that the Xilinx design flow is far more explored – there are many excellent tutorials for Xilinx devices, such as Adam Taylor's excellent Microzed Chronicles for the low level implementation details of Zynq design, or many interesting application projects, among many other extensive series on the topic.
 
 Altera, on the other hand, you have to dig around Rocketboards to find what you need. I am hoping to remedy that in this series to an extent.
 
@@ -23,13 +23,15 @@ Altera, on the other hand, you have to dig around Rocketboards to find what you 
 
 When discussing "FPGAs", people often conflate different things. An actual FPGA is shown below:
 
-![](RackMultipart20230208-1-esmi07_html_7bf1e6ee2139a9c2.png)
+![fpgabga](https://user-images.githubusercontent.com/124276754/217410213-836e8926-d919-4f33-bea7-def9579914c4.png)
 
 As you can see, the actual FPGA is an integrated circuit, IC. Modern FPGAs are almost invariably packaged as Ball-Grid-Array (BGA) packages due to the large number of pins. Typical FPGA BGAs are square, resulting in pin numbers such as 896 (30x30, including 4 corners) or 672 (26x26 including 4 corners).
 
 There are multiple different types of pins. This article will not go into detail, but suffice it to say pins can either be power pins, ground pins, fixed-purpose pins (which have a specific function) or pins which the user can customize. Perhaps later we will have a chance to explore this more.
 
 The boards people use to design with are colloquially referred to as FPGAs, but they are more accurately called development boards (Xilinx), development kits (Altera), or evaluation boards (when they use the expensive chips). All of these mean the same thing. They are platforms which integrate the FPGA chip into a more user-friendly environment, connecting the pins to all sorts of peripherals the user can use to interact with their digital logic. The next article will go over common peripherals, and the specific options provided on the Arrow SoCKit.
+
+![image](https://user-images.githubusercontent.com/124276754/217410387-a8a3dcbf-828f-4147-a503-ad86a6f01d51.png)
 
 The downside of development boards is that they limit the users' options. An FPGA chip can be used to interface with anything the user desires. On a development board, however, the vast majority of the FPGA pins are already committed to certain interfaces, allowing the user much less creativity. In exchange, though, the user does not have to design a PCB to use the FPGA this way, a tremendous advantage for accessibility and ramping up during the design process. (There are dev boards that provide various forms of customizable IO pins from different types of headers, but that's a topic for another day).
 
