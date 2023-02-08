@@ -1,7 +1,13 @@
 # Designing with the Arrow SoCKit: Part 1 (Introduction)
 
-## Introduction
+## Table of contents
+1. [Introduction](#introduction)
+2. [What is an FPGA?](#fpga-def)
+3. [FPGA Families](#fpga-families)
+4. [SOC FPGAs](#soc)
+5. [Conclusion](#conclusion)
 
+## Introduction
 This series of projects will be an introduction to the Arrow SoCKit, one of my personal favorite Altera development boards. There are several things I prefer about the SoCKit to the more common Cyclone V development boards like the DE10-Standard, Lite and Nano, or the DE0 – there will be more exposition on this later in this series.
 
 The SoCKit can be hard to find, as it went out of production a long time ago. Terasic may still have a few copies, but they are not generally in stock. That said, it should require minimal effort to port any of the designs in this series to a DE10 nano. In fact, one of the entries in this series will be an explicit port of one of my SoCKit designs to a DE10-Nano.
@@ -19,8 +25,7 @@ There are many reasons why I'm focusing on Altera devices rather than Xilinx dev
 
 Altera, on the other hand, you have to dig around Rocketboards to find what you need. I am hoping to remedy that in this series to an extent.
 
-## What is an FPGA?
-
+## What is an FPGA? <a name="fpga-def"></a>
 When discussing "FPGAs", people often conflate different things. An actual FPGA is shown below:
 
 ![fpgabga](https://user-images.githubusercontent.com/124276754/217410213-836e8926-d919-4f33-bea7-def9579914c4.png)
@@ -35,8 +40,7 @@ The boards people use to design with are colloquially referred to as FPGAs, but 
 
 The downside of development boards is that they limit the users' options. An FPGA chip can be used to interface with anything the user desires. On a development board, however, the vast majority of the FPGA pins are already committed to certain interfaces, allowing the user much less creativity. In exchange, though, the user does not have to design a PCB to use the FPGA this way, a tremendous advantage for accessibility and ramping up during the design process. (There are dev boards that provide various forms of customizable IO pins from different types of headers, but that's a topic for another day).
 
-## FPGA Families
-
+## FPGA Families <a name="fpga-families"></a>
 FPGAs come in many different flavors and price ranges. There are FPGA families designed for specific applications as well (such as the Xilinx RFSoC). The primary breakdown is by price – FPGAs come in low-range families, mid-range families, high-end families, and there is a wide range of prices in the high-end families.
 
 Make sure to understand the difference between a _family_ and the base technology. A Cyclone V and Stratix V belong to different families, but both use the same 28 nm technology. A Cyclone 10 uses 20 nm technology.
@@ -47,8 +51,7 @@ _Midrange_ FPGAs straddle the line between the cheap FPGAs and the high-end fami
 
 _High-end_ FPGAs are the tools used for the most intensive applications. These FPGAs operate at much higher clock speeds than the cheap ones, contain many times the amount of logic, and integrate advanced Gigabit Transceivers (GBTs) for the highest data transfer speeds. These easily cost several thousand dollars, but can get a lot more expensive than that.
 
-## SoC FPGAs
-
+## SoC FPGAs <a name="soc"></a>
 SoC stands for System-on-Chip. An SoC FPGA is an FPGA which integrate an ARM processor into the chip itself. This architecture allows for substantially higher bandwidth and _much_ more reliable communication between the programmable logic and the processing system. I have personal experience with a custom-designed FPGA-to-CPU bus. It was both slow and unreliable, and was extremely hard to debug. SoC interfaces can be debugged using the normal tools, as we will discuss later on.
 
 The main motivation for this kind of chip is that CPUs and FPGAs are good at different things. Programmable logic excels at fast parallel processing – processing a lot of data at the same time. CPUs are optimized for _sequential_ programming, meaning executing a number of different tasks in order. By providing a fast, effective interface between the two you get the best of both worlds. This is an oversimplification obviously – there's a lot to learn about this topic if you want to.
@@ -58,9 +61,7 @@ The CPU on most hobbyist development boards, including the SoCKit, consists of a
 Higher end chips like a Stratix 10, Agilex, Zynq MPSoC or Virtex-7 part usually are built on Arm Cortex A53s, a quad-core ARMv8 64-bit CPU. (There are several affordable kits from AMD-Xilinx built on the Zynq MPSoC with a quad-core A53, but those are not the focus of this series. Notable examples are the Kria KV/KR260 and the Ultra96V2.).
 
 ## Conclusion
-
 In the first part of this series, we went over the fundamentals of what the Arrow SoCKit is. Specifically:
-
 - What FPGAs and development boards are
 - A general description of FPGA price ranges and where the Cyclone V fits in
 - The concept of a System-on-Chip
