@@ -47,7 +47,7 @@ Make sure to understand the difference between a _family_ and the base technolog
 
 _Low-End_ FPGAs are relatively cheap, accessible devices. These are used for hobbyist projects, as well as lightweight industry applications that don't require large amounts of bandwidth or logic resources. The normal range for these is around $50-$500 for the FPGA chip itself, or $150-$1000 for a development board with one of these FPGAs. The Cyclone V that is the focus of this series is a good example of these.
 
-_Midrange_ FPGAs straddle the line between the cheap FPGAs and the high-end families. These are usually used for substantial but not overly intensive business applications. They provide a lot of value for applications that need meaningfully advanced technology but not necessarily the cutting edge. Typically, the chips will cost $500-$3000. Development boards usually run from $1500 all the way up to $6k-7k.
+_Midrange_ FPGAs straddle the line between the cheap FPGAs and the high-end families. These are usually used for substantial but not overly intensive business applications. They provide a lot of value for applications that need somewhat advanced technology and resources but not necessarily the cutting edge. Typically, the chips will cost $500-$3000. Development boards usually run from $1500 all the way up to $6k-7k.
 
 _High-end_ FPGAs are the tools used for the most intensive applications. These FPGAs operate at much higher clock speeds than the cheap ones, contain many times the amount of logic, and integrate advanced Gigabit Transceivers (GBTs) for the highest data transfer speeds. These easily cost several thousand dollars, but can get a lot more expensive than that.
 
