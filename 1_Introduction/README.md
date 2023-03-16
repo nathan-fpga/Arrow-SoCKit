@@ -1,4 +1,4 @@
-# Designing with the Arrow SoCKit: Part 1 (Introduction)
+# Designing with the Arrow SoCKit: Introduction (Part 1)
 
 ## Table of contents
 1. [Introduction](#introduction)
